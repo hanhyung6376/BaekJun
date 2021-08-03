@@ -1,5 +1,6 @@
 import sys
 
+
 # 유니온 (집합 합치기)
 def union(a, b):
     a = find(a)
@@ -10,6 +11,7 @@ def union(a, b):
     else:
         parent[a] = b
 
+
 # 파인드 (루트 노드 찾기)
 def find(target):
     if target == parent[target]:
@@ -17,6 +19,7 @@ def find(target):
 
     parent[target] = find(parent[target])
     return parent[target]
+
 
 input = sys.stdin.readline
 sys.setrecursionlimit(10 ** 6)
@@ -35,7 +38,7 @@ plan = list(map(int, input().split()))
 
 # find 연산
 for i in range(1, len(plan)):
-    if find(plan[i-1]-1) != find(plan[i]-1):
+    if find(plan[i - 1] - 1) != find(plan[i] - 1):
         isTrue = False
         break
 
