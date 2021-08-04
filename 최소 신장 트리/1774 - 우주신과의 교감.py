@@ -35,7 +35,6 @@ input = sys.stdin.readline
 
 n, m = map(int, input().split())
 point = []
-old_point = []
 parent = [i for i in range(n)]
 graph =[]
 for i in range(n):
