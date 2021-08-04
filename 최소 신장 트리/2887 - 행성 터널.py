@@ -20,6 +20,7 @@ def find(target):
 def distance(a, b):
     return min(abs(a[0] - b[0]), abs(a[1] - b[1]), abs(a[2] - b[2]))
 
+
 # 크루스칼 알고리즘
 def kruskal():
     cost = 0
