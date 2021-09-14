@@ -3,8 +3,6 @@ import sys
 
 MOD = 1000000007
 # start, end => 전체 구간, left, right => 탐색 구간, node => 트리에서의 위치
-
-
 def tree_mul(node, start, end, left, right):
     # 찾는 구간이 아니면
     if right < start or end < left:
