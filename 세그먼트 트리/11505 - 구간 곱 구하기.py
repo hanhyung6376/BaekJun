@@ -33,12 +33,13 @@ def update(node, start, end, idx, value):
     update(node * 2 + 1, mid + 1, end, idx, value)
     tree[node] = (tree[node * 2] * tree[node * 2 +1]) % 1000000007
 
-sys.setrecursionlimit(10 ** 6)
 input = sys.stdin.readline
 n, m, k = map(int, input().split())
-tree_size = 2 ** math.ceil(math.log2(n))
-tree = [0] * (tree_size * 2)
-arr = []
+tree_size = math.ceil(math.log2(n))
+tree_size = 1 << (tree_size+1)
+tree = [0] *  tree_size
+arr= []
+
 
 for i in range(n):
     num = int(input())
