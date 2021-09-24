@@ -1,12 +1,12 @@
 # 병합 정렬 풀이 .
 import sys
 
-def mergeSort(start, end):
+def MergeSort(start, end):
     global count
     if start < end:
         mid = (start + end) // 2
-        mergeSort(start, mid)
-        mergeSort(mid+1, end)
+        MergeSort(start, mid)
+        MergeSort(mid+1, end)
 
         left = start
         right = mid + 1
@@ -32,5 +32,5 @@ input = sys.stdin.readline
 count = 0
 n = int(input())
 arr = list(map(int, input().split()))
-mergeSort(0, n-1)
+MergeSort(0, n-1)
 print(count)
