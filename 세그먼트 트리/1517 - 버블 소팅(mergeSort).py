@@ -1,4 +1,4 @@
-# 병합 정렬 풀이
+# 병합 정렬 풀이 .
 import sys
 
 def mergeSort(start, end):
