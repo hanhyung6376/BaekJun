@@ -15,10 +15,10 @@ now = -float('inf')
 result = 0
 
 for i in range(n):
-    s, e = point[i]
-    if now < s:
-        now = s
-    if now < e:
-        result += e - now
-        now = e
+    start, end = point[i]
+    if now < start:
+        now = start
+    if now < end:
+        result += end - now
+        now = end
 print(result)
